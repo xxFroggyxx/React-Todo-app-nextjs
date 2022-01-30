@@ -2,7 +2,6 @@ import React from "react";
 import { StyledLi, StyledUl } from "./List.styles";
 
 function List({ todos, filter }) {
-  console.log(todos);
   return (
     <StyledUl>
       {todos
