@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { MenuContainer } from "./Menu.styles";
 
 function Menu() {
-  const [isActive, setIsActive] = useState(true);
   return (
     <MenuContainer
       onChange={(e) => {
