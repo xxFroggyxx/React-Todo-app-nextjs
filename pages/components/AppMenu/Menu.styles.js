@@ -7,7 +7,6 @@ export const MenuContainer = styled.div`
   label {
     cursor: pointer;
     text-align: center;
-    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
