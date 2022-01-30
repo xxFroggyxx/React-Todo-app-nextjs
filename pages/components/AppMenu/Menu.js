@@ -1,11 +1,11 @@
 import React from "react";
 import { MenuContainer } from "./Menu.styles";
 
-function Menu() {
+function Menu({ setFilter }) {
   return (
     <MenuContainer
       onChange={(e) => {
-        console.log(e.target.value); // Change soon..
+        setFilter(e.target.value); // Change soon..
       }}
     >
       <label>

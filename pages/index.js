@@ -29,7 +29,7 @@ export default function Home({ defaultTodos }) {
 
       <Layout>
         <Title />
-        <Menu />
+        <Menu setFilter={setFilter} />
         <Add todos={todos} setTodos={setTodos} />
         <List todos={todos} filter={filter} onChange={handleUpdate} />
       </Layout>
