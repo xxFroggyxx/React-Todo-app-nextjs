@@ -5,6 +5,7 @@ export const StyledUl = styled.ul`
 `;
 
 export const StyledLi = styled.li`
+  text-decoration: ${(props) => (props.completed ? "line-through" : "none")};
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
