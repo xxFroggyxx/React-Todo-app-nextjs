@@ -1,7 +1,19 @@
 import React from "react";
 import { DeleteAllButton, DeleteIcon, StyledLi, StyledUl } from "./List.styles";
 
-function List({ todos, filter, onChange }) {
+function List({ todos, setTodos, filter, onChange }) {
+  const deleteTask = (arg) => {
+    const newTodos = todos.filter((todo) => {
+      return todo.id != arg;
+    });
+    setTodos(newTodos);
+  };
+  const deleteAllTasks = () => {
+    const completedTasks = todos.filter((todo) => {
+      return !todo.completed;
+    });
+    setTodos(completedTasks);
+  };
   return (
     <>
       <StyledUl
@@ -28,12 +40,18 @@ function List({ todos, filter, onChange }) {
                 defaultChecked={todo.completed}
               />
               <label htmlFor={todo.id}>{todo.title}</label>
-              {filter === "completed" ? <DeleteIcon /> : null}
+              {filter === "completed" ? (
+                <DeleteIcon
+                  onClick={() => {
+                    deleteTask(todo.id);
+                  }}
+                />
+              ) : null}
             </StyledLi>
           ))}
       </StyledUl>
       {filter === "completed" ? (
-        <DeleteAllButton>delete all</DeleteAllButton>
+        <DeleteAllButton onClick={deleteAllTasks}>delete all</DeleteAllButton>
       ) : null}
     </>
   );

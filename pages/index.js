@@ -31,7 +31,12 @@ export default function Home({ defaultTodos }) {
         <Title />
         <Menu setFilter={setFilter} />
         <Add todos={todos} setTodos={setTodos} />
-        <List todos={todos} filter={filter} onChange={handleUpdate} />
+        <List
+          todos={todos}
+          setTodos={setTodos}
+          filter={filter}
+          onChange={handleUpdate}
+        />
       </Layout>
     </div>
   );
