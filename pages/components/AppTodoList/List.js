@@ -14,6 +14,7 @@ function List({ todos, setTodos, filter, onChange }) {
     });
     setTodos(completedTasks);
   };
+
   return (
     <>
       <StyledUl
@@ -50,7 +51,11 @@ function List({ todos, setTodos, filter, onChange }) {
             </StyledLi>
           ))}
       </StyledUl>
-      {filter === "completed" ? (
+      {(filter === "completed") &
+      (todos.filter((todo) => {
+        return todo.completed;
+      }).length >
+        0) ? (
         <DeleteAllButton onClick={deleteAllTasks}>delete all</DeleteAllButton>
       ) : null}
     </>
