@@ -9,6 +9,7 @@ import Layout from "./components/Layout";
 
 export default function Home({ defaultTodos }) {
   const [todos, setTodos] = useState(defaultTodos);
+  const [filter, setFilter] = useState("default");
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -21,7 +22,7 @@ export default function Home({ defaultTodos }) {
         <Title />
         <Menu />
         <Add />
-        <List todos={todos} />
+        <List todos={todos} filter={filter} />
       </Layout>
     </div>
   );
