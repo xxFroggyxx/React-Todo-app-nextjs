@@ -14,9 +14,17 @@ export const AddContainer = styled.form`
     border-color: #bdbdbd;
     border: 1px solid #bdbdbd;
     padding: 0.5rem 1rem;
+    transition: 0.5s all ease;
+    :hover {
+      border-color: black;
+    }
+    :focus {
+      border-color: black;
+    }
   }
 
   button {
+    cursor: pointer;
     background-color: #2f80ed;
     border-radius: 12px;
     color: #fff;
@@ -24,5 +32,9 @@ export const AddContainer = styled.form`
     border: 0;
     border: 1px solid #bdbdbd;
     box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+    transition: 0.5s all ease;
+    :hover {
+      background-color: #2166c2;
+    }
   }
 `;
