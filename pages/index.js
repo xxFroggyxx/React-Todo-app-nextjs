@@ -21,7 +21,7 @@ export default function Home({ defaultTodos }) {
       <Layout>
         <Title />
         <Menu />
-        <Add />
+        <Add todos={todos} setTodos={setTodos} />
         <List todos={todos} filter={filter} />
       </Layout>
     </div>
