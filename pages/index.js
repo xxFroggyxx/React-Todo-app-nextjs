@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Menu from "./components/AppMenu/Menu";
@@ -6,7 +7,8 @@ import Add from "./components/AppTodoAdd/Add";
 import List from "./components/AppTodoList/List";
 import Layout from "./components/Layout";
 
-export default function Home() {
+export default function Home({ defaultTodos }) {
+  const [todos, setTodos] = useState(defaultTodos);
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -19,8 +21,16 @@ export default function Home() {
         <Title />
         <Menu />
         <Add />
-        <List />
+        <List todos={todos} />
       </Layout>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const temp = await res.json();
+  const defaultTodos = temp.slice(0, 10);
+
+  return { props: { defaultTodos } };
 }
