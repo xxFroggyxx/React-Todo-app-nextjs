@@ -1,25 +1,16 @@
 import React from "react";
 import { StyledLi, StyledUl } from "./List.styles";
 
-function List() {
+function List({ todos }) {
+  console.log(todos);
   return (
     <StyledUl>
-      <StyledLi>
-        <input type="checkbox" />
-        <label>Go to the gym</label>
-      </StyledLi>
-      <StyledLi>
-        <input type="checkbox" />
-        <label>Learn programming</label>
-      </StyledLi>
-      <StyledLi>
-        <input type="checkbox" />
-        <label>Make a report</label>
-      </StyledLi>
-      <StyledLi>
-        <input type="checkbox" />
-        <label>Go to bed at 11:00PM</label>
-      </StyledLi>
+      {todos.map((todo) => (
+        <StyledLi key={todo.id} completed={todo.completed}>
+          <input id={todo.id} type="checkbox" />
+          <label htmlFor={todo.id}>{todo.title}</label>
+        </StyledLi>
+      ))}
     </StyledUl>
   );
 }
