@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](blob:https://vercel.com/d7f99b68-d5d0-4665-b025-dd832ec7963a)
+![screenshot](https://raw.githubusercontent.com/xxFroggyxx/Todo-app/main/public/screenshot.png?token=GHSAT0AAAAAABQ6CQRLQOSXN6MPHVENFHTKYPWZ52Q)
 
 Basic Todo app from [devchallenges](https://devchallenges.io/)
 
@@ -47,13 +47,13 @@ Basic Todo app from [devchallenges](https://devchallenges.io/)
 ## Features
 
 ### User can:
+
 - can add a new task
 - can complete a task
 - can toggle between All, Active and Completed
 - can remove one or all tasks under the Completed tab
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
-
 
 ## Contact
 
