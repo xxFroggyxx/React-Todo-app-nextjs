@@ -1,9 +1,13 @@
 import React from "react";
 import { StyledLi, StyledUl } from "./List.styles";
 
-function List({ todos, filter }) {
+function List({ todos, filter, onChange }) {
   return (
-    <StyledUl>
+    <StyledUl
+      onChange={(e) => {
+        onChange(e.target.id);
+      }}
+    >
       {todos
         .filter((todo) => {
           switch (filter) {

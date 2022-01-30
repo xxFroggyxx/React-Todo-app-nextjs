@@ -10,6 +10,15 @@ import Layout from "./components/Layout";
 export default function Home({ defaultTodos }) {
   const [todos, setTodos] = useState(defaultTodos);
   const [filter, setFilter] = useState("default");
+
+  const handleUpdate = (id) => {
+    const newTodos = [...todos];
+    const index = newTodos.findIndex((todo) => todo.id == id);
+
+    newTodos[index].completed = !newTodos[index].completed;
+    setTodos(newTodos);
+  };
+
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -22,7 +31,7 @@ export default function Home({ defaultTodos }) {
         <Title />
         <Menu />
         <Add todos={todos} setTodos={setTodos} />
-        <List todos={todos} filter={filter} />
+        <List todos={todos} filter={filter} onChange={handleUpdate} />
       </Layout>
     </div>
   );
