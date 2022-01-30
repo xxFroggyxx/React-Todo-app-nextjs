@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Menu from "./components/AppMenu/Menu";
 import Title from "./components/AppTitle/Title";
+import Add from "./components/AppTodoAdd/Add";
 import Layout from "./components/Layout";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Layout>
         <Title />
         <Menu />
+        <Add />
       </Layout>
     </div>
   );
