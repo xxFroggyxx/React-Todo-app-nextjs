@@ -18,7 +18,11 @@ function List({ todos, filter }) {
         })
         .map((todo) => (
           <StyledLi key={todo.id} completed={todo.completed}>
-            <input id={todo.id} type="checkbox" />
+            <input
+              id={todo.id}
+              type="checkbox"
+              defaultChecked={todo.completed}
+            />
             <label htmlFor={todo.id}>{todo.title}</label>
           </StyledLi>
         ))}
