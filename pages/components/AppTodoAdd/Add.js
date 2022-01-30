@@ -20,6 +20,7 @@ function Add({ todos, setTodos }) {
     addNewTodo(content);
     setContent("");
   };
+
   return (
     <AddContainer onSubmit={handleFormSubmit}>
       <input
