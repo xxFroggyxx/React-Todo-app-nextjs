@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Menu from "./components/AppMenu/Menu";
 import Title from "./components/AppTitle/Title";
 import Add from "./components/AppTodoAdd/Add";
+import List from "./components/AppTodoList/List";
 import Layout from "./components/Layout";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Title />
         <Menu />
         <Add />
+        <List />
       </Layout>
     </div>
   );
