@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import GlobalStyle from "@/styles/globalStyles";
 import Menu from "@/components/AppMenu/Menu";
 import Title from "@/components/AppTitle/Title";
 import Add from "@/components/AppTodoAdd/Add";
@@ -20,13 +20,14 @@ export default function Home({ defaultTodos }) {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className="wrapper">
       <Head>
         <title>Todo App | {Home.name}</title>
         <meta name="description" content="Todo App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <GlobalStyle />
       <Layout>
         <Title />
         <Menu setFilter={setFilter} />
