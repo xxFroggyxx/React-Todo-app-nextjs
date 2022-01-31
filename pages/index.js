@@ -20,7 +20,7 @@ export default function Home({ defaultTodos }) {
   };
 
   return (
-    <div className="wrapper">
+    <div className="App">
       <Head>
         <title>Todo App | {Home.name}</title>
         <meta name="description" content="Todo App" />

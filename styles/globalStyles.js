@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
   }
 
-  .wrapper {
+  .App {
     display: flex;
     justify-content: center;
   }
