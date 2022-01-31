@@ -42,16 +42,16 @@ Basic Todo app from [devchallenges](https://devchallenges.io/)
 ## Built With
 
 - [React](https://reactjs.org/)
-- [NuxtJS](https://nuxtjs.org/)
+- [NextJS](https://nextjs.org/)
 
 ## Features
 
 ### User can:
 
-- can add a new task
-- can complete a task
-- can toggle between All, Active and Completed
-- can remove one or all tasks under the Completed tab
+- add a new task
+- complete a task
+- toggle between All, Active and Completed
+- remove one or all tasks under the Completed tab
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
 
